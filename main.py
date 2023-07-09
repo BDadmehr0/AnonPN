@@ -1,6 +1,8 @@
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
 from lxml import etree
+
+from lib.banner import *
 
 def exct_phonecart():
     phone = ''
