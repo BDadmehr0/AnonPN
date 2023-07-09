@@ -5,10 +5,12 @@ from lxml import etree
 from colorama import Fore as color
 from colorama import Style as font
 
-from lib.banner import *
+from lib.banner import home
 
+c = 0
 _ = home()
 com_username = platform.node()
+
 def exct_phonecart():
     phone = ''
     try:
@@ -40,9 +42,21 @@ def recive_sms(phone):
 if __name__ == "__main__":
 
     print(_)
-    ascii_menu = color.WHITE+'''\t[1] Start\t[0] Exit'''
-    
-    home_i = int(input(f'— {color.YELLOW}{com_username}{color.WHITE}@{color.GREEN}anonpn{color.YELLOW} ~{color.BLACK} $'))
+    print(f'{color.WHITE}[{color.CYAN}{font.BRIGHT}1{color.WHITE}{font.NORMAL}]{color.GREEN}{font.BRIGHT} Start {color.WHITE}[{color.CYAN}{font.BRIGHT}0{color.WHITE}{font.NORMAL}] {font.BRIGHT}{color.RED}Exit\n{font.NORMAL}')
+    while True:
+        c += 1
+        home_i = input(f'— {color.YELLOW}{com_username}{color.WHITE}@{color.GREEN}anonpn{color.YELLOW} ~{color.BLACK} $ {color.WHITE}')
+        if c == 15:
+            print("\nI feel that you don't know how to work with this script or you are trying to enter")
+            c = 0
+        
+        if home_i == '1':
+            ascii_menu = color.WHITE+'''\t[1] Recive last sms\t[0] Exit'''
+        elif home_i == '0':
+            print('Bye Bye')
+            exit()
+
+
 
     # phone = exct_phonecart()
     # lastsms = recive_sms(phone=phone)
