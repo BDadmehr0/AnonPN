@@ -33,6 +33,10 @@ def recive_sms(phone):
     return phone
 
 if __name__ == "__main__":
-    phone = exct_phonecart()
-    lastsms = recive_sms(phone=phone)
-    print(phone, lastsms)
+
+    _ = home()
+    print(_)
+
+    # phone = exct_phonecart()
+    # lastsms = recive_sms(phone=phone)
+    # print(phone, lastsms)
