@@ -1,9 +1,8 @@
 import requests
 import platform
-from bs4 import BeautifulSoup
-from lxml import etree
 from colorama import Fore as color
 from colorama import Style as font
+from os import system as T
 
 from lib.banner import home
 
@@ -11,38 +10,16 @@ c = 0
 _ = home()
 com_username = platform.node()
 
-def exct_phonecart():
-    phone = ''
+def clear():
     try:
-        #Request URL
-        page = requests.get("https://anonymsms.com/")
-
-        #Fetch webpage
-        soup = BeautifulSoup(page.content,"html.parser")
-
-        #Scraping Data
-        phone = str(soup.find("div",{"class":"sms-card__number"}).text.replace("\n","").replace('content_copy','').replace(' ', '').strip())
-        phone = phone[1:]
-        return phone
-    except requests.exceptions.ConnectionError:
-        print('ConnectionError: Try Again')
-
-def recive_sms(phone):
-    URL = f'https://anonymsms.com/number/{phone}/'
-    page = requests.get(URL)
-
-    #Fetch webpage
-    soup = BeautifulSoup(page.content,"html.parser")
-
-    #Scraping Data
-    phone = str(soup.find("td",{"class":"table-panel__message"}).text.replace("\n","").strip())
-    phone = phone[1:]
-    return phone
+        T('clear')
+    except:
+        T('cls')
 
 if __name__ == "__main__":
 
     print(_)
-    print(f'{color.WHITE}[{color.CYAN}{font.BRIGHT}1{color.WHITE}{font.NORMAL}]{color.GREEN}{font.BRIGHT} Start {color.WHITE}[{color.CYAN}{font.BRIGHT}0{color.WHITE}{font.NORMAL}] {font.BRIGHT}{color.RED}Exit\n{font.NORMAL}')
+    print(f'{color.WHITE}[{color.CYAN}{font.BRIGHT}1{color.WHITE}{font.NORMAL}]{color.GREEN}{font.BRIGHT} Start {font.NORMAL}{color.WHITE}[{color.CYAN}{font.BRIGHT}0{color.WHITE}{font.NORMAL}] {font.BRIGHT}{color.RED}Exit\n{font.NORMAL}')
     while True:
         c += 1
         home_i = input(f'— {color.YELLOW}{com_username}{color.WHITE}@{color.GREEN}anonpn{color.YELLOW} ~{color.BLACK} $ {color.WHITE}')
@@ -51,7 +28,14 @@ if __name__ == "__main__":
             c = 0
         
         if home_i == '1':
-            ascii_menu = color.WHITE+'''\t[1] Recive last sms\t[0] Exit'''
+            clear()
+            #Recive last sms
+            print(_)
+            print(f'{color.WHITE}[{color.CYAN}{font.BRIGHT}1{color.WHITE}{font.NORMAL}]{color.GREEN}{font.BRIGHT} Get Phone Number {font.NORMAL}{color.WHITE}[{color.CYAN}{font.BRIGHT}0{color.WHITE}{font.NORMAL}] {font.BRIGHT}{color.RED}Exit\n{font.NORMAL}')
+            menu_i = input(f'— {color.YELLOW}{com_username}{color.WHITE}@{color.GREEN}menu{color.YELLOW} ~{color.BLACK} $ {color.WHITE}')
+
+            if menu_i == '1':
+                pass
         elif home_i == '0':
             print('Bye Bye')
             exit()
