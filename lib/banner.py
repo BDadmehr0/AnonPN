@@ -6,7 +6,10 @@ def home():
           /  \  ____   ___  ____  _____) ) |   | |
          / /\ \|  _ \ / _ \|  _ \|  ____/| |   | |
         | |__| | | | | |_| | | | | |     | |   | |
-        |______|_| |_|\___/|_| |_|_|     |_|   |_|'''
+        |______|_| |_|\___/|_| |_|_|     |_|   |_|\n'''
     
-    ascii_menu = '''\n[1] Get Phone'''
+    ascii_menu = color.WHITE+'''\t[1] Start\t[0] Exit'''
 
+def start_panel():
+    
+    ascii_menu = color.WHITE+'''\t[1] Recive last sms\t[0] Exit'''
