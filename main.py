@@ -32,16 +32,15 @@ if __name__ == "__main__":
             #Recive last sms
             print(_)
             print(f'{color.WHITE}[{color.CYAN}{font.BRIGHT}1{color.WHITE}{font.NORMAL}]{color.GREEN}{font.BRIGHT} Get Phone Number {font.NORMAL}{color.WHITE}[{color.CYAN}{font.BRIGHT}0{color.WHITE}{font.NORMAL}] {font.BRIGHT}{color.RED}Exit\n{font.NORMAL}')
-            menu_i = input(f'— {color.YELLOW}{com_username}{color.WHITE}@{color.GREEN}menu{color.YELLOW} ~{color.BLACK} $ {color.WHITE}')
+	    try:
+		menu_i = input(f'— {color.YELLOW}{com_username}{color.WHITE}@{color.GREEN}menu{color.YELLOW} ~{color.BLACK} $ {color.WHITE}')
+	    except:
+		exit()
 
             if menu_i == '1':
-                pass
+		phone = exct_phonecart()
         elif home_i == '0':
             print('Bye Bye')
             exit()
-
-
-
-    # phone = exct_phonecart()
     # lastsms = recive_sms(phone=phone)
     # print(phone, lastsms)
