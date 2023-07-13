@@ -10,3 +10,7 @@ def home():
 /_/ |_/_//_/\___/_//_/_/  /_/|_/    |{color.CYAN} https://github.com/BDadmehr0/AnonPN\n'''
     
     return ascii_banner
+
+def simcart_panel(p, r, c):
+    ascii_simcart = f'\n[{color.CYAN}{font.BRIGHT}Number{font.NORMAL}{color.WHITE}]{color.GREEN} {p}\n[{color.CYAN}{font.BRIGHT}Used{font.NORMAL}{color.WHITE}]{color.GREEN} {r}\n[{color.CYAN}{font.BRIGHT}Cuntry{font.NORMAL}{color.WHITE}]{color.GREEN} {c}\n'
+    return ascii_simcart
