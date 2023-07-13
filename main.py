@@ -32,6 +32,12 @@ if __name__ == "__main__":
                 cuntry = exct_cuntry()
 
                 print(simcart_panel(p=phone, r=recive, c=cuntry))
+                print(f'{color.WHITE}[{color.CYAN}{font.BRIGHT}1{color.WHITE}{font.NORMAL}]{color.GREEN}{font.BRIGHT} Recive SMS {font.NORMAL}{color.WHITE}[{color.CYAN}{font.BRIGHT}0{color.WHITE}{font.NORMAL}] {font.BRIGHT}{color.RED}Exit\n{font.NORMAL}')
+
+                if menu_i == '1':
+                    pass
+                elif menu_i == '0':
+                    exit()
 
             elif menu_i == '0':
                 exit()
