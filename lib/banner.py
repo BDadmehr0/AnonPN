@@ -1,49 +1,27 @@
 from colorama import Fore as color
 from colorama import Style as font
 from requests import get as g
-class colors:
 
-
-'''Colors class:reset all colors with colors.reset; two
-sub classes fg for foreground
-and bg for background; use as colors.subclass.colorname.
-i.e. colors.fg.red or colors.bg.greenalso, the generic bold, disable,
-underline, reverse, strike through,
-and invisible work with the main class i.e. colors.bold'''
-reset = '\033[0m'
-bold = '\033[01m'
-disable = '\033[02m'
-underline = '\033[04m'
-reverse = '\033[07m'
-strikethrough = '\033[09m'
-invisible = '\033[08m'
-
-class fg:
-		black = '\033[30m'
-		red = '\033[31m'
-		green = '\033[32m'
-		orange = '\033[33m'
-		blue = '\033[34m'
-		purple = '\033[35m'
-		cyan = '\033[36m'
-		lightgrey = '\033[37m'
-		darkgrey = '\033[90m'
-		lightred = '\033[91m'
-		lightgreen = '\033[92m'
-		yellow = '\033[93m'
-		lightblue = '\033[94m'
-		pink = '\033[95m'
-		lightcyan = '\033[96m'
-
-	class bg:
-		black = '\033[40m'
-		red = '\033[41m'
-		green = '\033[42m'
-		orange = '\033[43m'
-		blue = '\033[44m'
-		purple = '\033[45m'
-		cyan = '\033[46m'
-		lightgrey = '\033[47m'
+''''Regular Colors
+Value	Color
+\e[0;30m	Black
+\e[0;31m	Red
+\e[0;32m	Green
+\e[0;33m	Yellow
+\e[0;34m	Blue
+\e[0;35m	Purple
+\e[0;36m	Cyan
+\e[0;37m	White
+Bold
+Value	Color
+\e[1;30m	Black
+\e[1;31m	Red
+\e[1;32m	Green
+\e[1;33m	Yellow
+\e[1;34m	Blue
+\e[1;35m	Purple
+\e[1;36m	Cyan
+\e[1;37m	White''''
 
 def home():
     v = g('https://raw.githubusercontent.com/BDadmehr0/AnonPN/main/lib/version').text
