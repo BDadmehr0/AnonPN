@@ -54,6 +54,3 @@ def recive_sms(phone):
     phone = str(soup.find("td",{"class":"table-panel__message"}).text.replace("\n","").strip())
     phone = phone[1:]
     return phone
-
-s = exct_added()
-print(s)
