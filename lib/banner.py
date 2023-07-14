@@ -21,7 +21,8 @@ Value	Color
 \e[1;34m	Blue
 \e[1;35m	Purple
 \e[1;36m	Cyan
-\e[1;37m	White''''
+\e[1;37m	White
+''''
 
 def home():
     v = g('https://raw.githubusercontent.com/BDadmehr0/AnonPN/main/lib/version').text
