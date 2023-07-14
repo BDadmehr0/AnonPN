@@ -12,5 +12,5 @@ def home():
     return ascii_banner
 
 def simcart_panel(p, r, c):
-    ascii_simcart = f'\n[{color.CYAN}{font.BRIGHT}Number{font.NORMAL}{color.WHITE}]{color.GREEN} {p}\n{color.WHITE}[{color.CYAN}{font.BRIGHT}Used{font.NORMAL}{color.WHITE}]{color.GREEN} {r}\n{color.WHITE}[{color.CYAN}{font.BRIGHT}Cuntry{font.NORMAL}{color.WHITE}]{color.GREEN} {c}\n'
+    ascii_simcart = f'\n[{color.CYAN}{font.BRIGHT}Number{font.NORMAL}{color.WHITE}]{color.GREEN} +{p}\n{color.WHITE}[{color.CYAN}{font.BRIGHT}Used{font.NORMAL}{color.WHITE}]{color.GREEN} {r}\n{color.WHITE}[{color.CYAN}{font.BRIGHT}Cuntry{font.NORMAL}{color.WHITE}]{color.GREEN} {c}\n'
     return ascii_simcart

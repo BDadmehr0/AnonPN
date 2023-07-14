@@ -52,7 +52,7 @@ def exct_phonecart():
         phone = str(soup.find("div",{"class":"sms-card__number"}).text.replace("\n","").replace('content_copy','').replace(' ', '').strip())
         phone = phone[1:]
 
-        return "+" + phone
+        return phone
     except requests.exceptions.ConnectionError:
         print('ConnectionError: check your netowrk connection and try again')
 

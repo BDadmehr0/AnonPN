@@ -18,7 +18,7 @@ def clear():
         T('cls')
 
 if __name__ == "__main__":
-
+    clear()
     print(_)
     print(f'{color.WHITE}[{color.CYAN}{font.BRIGHT}1{color.WHITE}{font.NORMAL}]{color.GREEN}{font.BRIGHT} Fake phone number {font.NORMAL}{color.WHITE}[{color.CYAN}{font.BRIGHT}0{color.WHITE}{font.NORMAL}] {font.BRIGHT}{color.RED}Exit\n{font.NORMAL}')
     while True:
@@ -33,11 +33,13 @@ if __name__ == "__main__":
 
                 print(simcart_panel(p=phone, r=recive, c=cuntry))
                 print(f'{color.WHITE}[{color.CYAN}{font.BRIGHT}1{color.WHITE}{font.NORMAL}]{color.GREEN}{font.BRIGHT} Recive SMS {font.NORMAL}{color.WHITE}[{color.CYAN}{font.BRIGHT}0{color.WHITE}{font.NORMAL}] {font.BRIGHT}{color.RED}Exit\n{font.NORMAL}')
-
-                if menu_i == '1':
-                    pass
-                elif menu_i == '0':
-                    exit()
+                while True:
+                    recive_i = input(f'— {color.YELLOW}{com_username}{color.WHITE}@{color.GREEN}RECmenu{color.YELLOW} ~{color.BLACK} $ {color.WHITE}')
+                    if menu_i == '1':
+                        last_sms = recive_sms(phone=phone)
+                        print(last_sms)
+                    elif menu_i == '0':
+                        exit()
 
             elif menu_i == '0':
                 exit()
@@ -49,6 +51,3 @@ if __name__ == "__main__":
         elif c == 30:
             print('O_O Stop')
         
-        
-    # lastsms = recive_sms(phone=phone)
-    # print(phone, lastsms)
