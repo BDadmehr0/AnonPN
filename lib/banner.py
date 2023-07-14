@@ -2,7 +2,7 @@ from colorama import Fore as color
 from colorama import Style as font
 from requests import get as g
 
-# sss   sssdasssssss
+# sss   sssdassssssss
 
 def home():
     v = g('https://raw.githubusercontent.com/BDadmehr0/AnonPN/main/lib/version').text
