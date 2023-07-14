@@ -3,7 +3,7 @@ from colorama import Style as font
 from requests import get as g
 
 # sss   sssdassssssssss
-
+a
 def home():
     v = g('https://raw.githubusercontent.com/BDadmehr0/AnonPN/main/lib/version').text
     ascii_banner = color.WHITE+f'''
