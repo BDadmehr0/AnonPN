@@ -7,6 +7,8 @@ from os import system as T
 from lib.banner import home , simcart_panel
 from lib.anonpn import *
 
+# Hello world
+
 c = 0
 _ = home()
 com_username = platform.node()
