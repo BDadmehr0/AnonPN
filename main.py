@@ -30,15 +30,15 @@ if __name__ == "__main__":
             menu_i = input(f'— {color.YELLOW}{com_username}{color.WHITE}@{color.GREEN}AnonPN{color.YELLOW} ~{color.BLACK} $ {color.WHITE}')
             if menu_i == '1':
                 phone = exct_phonecart()
-                recive = exct_recvied()
-                cuntry = exct_cuntry()
+                receive = exct_received()
+                country = exct_country()
 
-                print(simcart_panel(p=phone, r=recive, c=cuntry))
+                print(simcart_panel(p=phone, r=recive, c=country))
                 print(f'{color.WHITE}[{color.CYAN}{font.BRIGHT}1{color.WHITE}{font.NORMAL}]{color.GREEN}{font.BRIGHT} Recive SMS {font.NORMAL}{color.WHITE}[{color.CYAN}{font.BRIGHT}0{color.WHITE}{font.NORMAL}] {font.BRIGHT}{color.RED}Exit\n{font.NORMAL}')
                 while True:
-                    recive_i = input(f'— {color.YELLOW}{com_username}{color.WHITE}@{color.GREEN}RECmenu{color.YELLOW} ~{color.BLACK} $ {color.WHITE}')
+                    receive_i = input(f'— {color.YELLOW}{com_username}{color.WHITE}@{color.GREEN}RECmenu{color.YELLOW} ~{color.BLACK} $ {color.WHITE}')
                     if menu_i == '1':
-                        last_sms = recive_sms(phone=phone)
+                        last_sms = receive_sms(phone=phone)
                         print(last_sms)
                     elif menu_i == '0':
                         exit()
