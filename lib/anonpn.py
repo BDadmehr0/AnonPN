@@ -21,7 +21,7 @@ def exct_added(): # TODO: Fix exct added time
         hour = str(element.text.replace("\n","").strip())
         return hour
 
-def exct_recvied():
+def exct_received():
     # sms Received
     try:
         page = requests.get("https://anonymsms.com/")
@@ -33,8 +33,8 @@ def exct_recvied():
     except requests.exceptions.ConnectionError:
         print('ConnectionError: check your netowrk connection and try again')
 
-def exct_cuntry():
-    # phone number cuntry
+def exct_country():
+    # phone number country code
     try:
         page = requests.get("https://anonymsms.com/")
         soup = BeautifulSoup(page.content,"html.parser")
@@ -56,7 +56,7 @@ def exct_phonecart():
     except requests.exceptions.ConnectionError:
         print('ConnectionError: check your netowrk connection and try again')
 
-def recive_sms(phone):
+def receive_sms(phone):
     try:
         page = requests.get(f'https://anonymsms.com/number/{phone}/')
         #Fetch webpage
